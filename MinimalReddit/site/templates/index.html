@@ -1,0 +1,27 @@
+<!--<!DOCTYPE html>-->
+<html>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+	<title>Reddit</title>
+	<h1>Reddit</h1>
+	{% for post in posts %}
+		<div class="content">	
+			<a href={{ post.url }}>{{ post.title }}</a>
+			<br>
+			<a class="comments" href={{ post.permalink }}>{{ post.num_comments }} comments</a>
+			<br>
+		</div>
+		<br>
+	{% endfor %}
+	<footer>
+		View  more: <a href="">next ></a>
+	</footer>
+	<script>
+		var subreddit = document.URL.split('/')[4];
+		if(subreddit != undefined){
+			document.title = subreddit;
+			document.getElementsByTagName("h1")[0].innerHTML = "/r/" + subreddit;
+		}
+	</script>
+</html>

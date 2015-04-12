@@ -1,0 +1,21 @@
+a{
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
+}
+.comments{
+	color: #aaa;
+	transition: color 0.2s linear;
+
+}
+h1{
+	font-family: "Open Sans", sans-serif;
+	text-decoration: none;
+	font-size: 3.2em;
+	color: #D5D5D5;
+	margin-top: .8em;
+	transition: all 0.2s ease;
+	font-weight: 300;
+}
+body{
+	text-align: center;
+}
